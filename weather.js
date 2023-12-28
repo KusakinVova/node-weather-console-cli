@@ -1,19 +1,20 @@
 #!/usr/bin/env node
 
 import { getArgs } from './helpers/args.js';
+import { printError, printHelp, printSuccess } from './services/log.service.js';
 
 const initCLI = () => {
   const args = getArgs(process.argv);
   console.log(args);
 
   if (args.h) {
-    console.log('Show help');
+    printHelp();
   }
   if (args.s) {
-    console.log('Save city');
+    printSuccess('Save city');
   }
   if (args.t) {
-    console.log('Save token');
+    printError('Save token');
   }
 };
 
