@@ -2,6 +2,16 @@
 
 import { getArgs } from './helpers/args.js';
 import { printError, printHelp, printSuccess } from './services/log.service.js';
+import { getKeyValue, saveKeyValue } from './services/storage.service.js';
+
+const saveToken = async (token) => {
+  try {
+    await saveKeyValue('token', token);
+    printSuccess('Token has been saved');
+  } catch (error) {
+    printError(e.message);
+  }
+};
 
 const initCLI = () => {
   const args = getArgs(process.argv);
@@ -14,7 +24,7 @@ const initCLI = () => {
     printSuccess('Save city');
   }
   if (args.t) {
-    printError('Save token');
+    return saveToken(args.t);
   }
 };
 
