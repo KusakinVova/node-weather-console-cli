@@ -1,5 +1,5 @@
 import { homedir } from 'os';
-import { join, basename, dirname, extname, relative, isAbsolute, resolve, sep } from 'path';
+import { join } from 'path';
 import { promises } from 'fs';
 
 const filePath = join(homedir(), 'weather-cli-data.json');

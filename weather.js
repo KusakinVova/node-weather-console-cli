@@ -21,14 +21,24 @@ const saveToken = async (token) => {
 };
 
 const showWeather = async () => {
-  const city = 'Antalya';
-  const data = await getWeather(city);
-  console.log(data);
+  try {
+    const city = 'Antalya';
+    const weather = await getWeather(city);
+    console.log(weather);
+  } catch (e) {
+    if (e?.response?.status == 404) {
+      printError('City is not correct');
+    } else if (e?.response?.status == 401) {
+      printError('Token is not correct');
+    } else {
+      printError(e.message);
+    }
+  }
 };
 
 const initCLI = () => {
   const args = getArgs(process.argv);
-  //   console.log(args);
+  //   console.log(process.env?.TOKEN);
 
   if (args.h) {
     printHelp();
