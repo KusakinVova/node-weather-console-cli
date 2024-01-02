@@ -70,6 +70,7 @@ const initCLI = () => {
 
   if (args.h) {
     printHelp();
+    return;
   }
   if (args.s) {
     showWeather(args.s);
