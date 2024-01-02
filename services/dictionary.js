@@ -1,6 +1,6 @@
-const TOKEN_DICTIONARY = {
+const DICTIONARY = {
   token: 'token',
   city: 'city',
 };
 
-export { TOKEN_DICTIONARY };
+export { DICTIONARY };
