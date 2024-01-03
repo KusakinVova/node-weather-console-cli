@@ -1,6 +1,6 @@
 {
   "name": "weather-console-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "CLI for get weather",
   "main": "weather.js",
   "bin": {
@@ -20,7 +20,7 @@
   "homepage": "",
   "repository": {
     "type": "git",
-    "url": "https://"
+    "url": "https://github.com/KusakinVova/node-weather-console-cli"
   },
   "bugs": {
     "url": "https://",

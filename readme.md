@@ -1,6 +1,16 @@
 # Weather-CLI
 
+## Install of global variable
+
+```bash
+npm i -g weather-console-cli
+```
+
 ## Result
+
+```bash
+weather
+```
 
 ```console
 WEATHER WEATHER in city London
@@ -13,6 +23,10 @@ Wind speed: 5.66
 ![Alt text](image.png)
 
 ## Help
+
+```bash
+weather -h
+```
 
 ```console
 HELP
